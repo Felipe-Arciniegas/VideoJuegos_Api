@@ -2,22 +2,42 @@
 
 API Desarrollada para la Gestion de un catalogo de videojuegos para una industria o comercio de juegos electronicos. La API le permitira visualizar el catalogo de videojuegos, tambien le permitira añadir nuevos videojuegos y editarlos despues de haberlos guardado, por ultimo tambien podra eliminar estos.
 
-## Instalación
-
-Para la instalacion de la API, baje los archivos del repositorio y despues simplemente ejecute:
-
+## ¿Como correr el proyecto?
+**1:** Clonar el repositorio con el comando de git:
 ```bash
-pip install "__requirement__"
+git clone <dirección del repo>
 ```
-los programas que debe instalar se encuentran en el archivo: requierements.txt
-
-## Uso
-
-Para utilizar la Api debe conectar su servidor con el archivo main.py, por ejemplo:
-
+**2:** Ingresar desde la terminal dentro de la carpeta del proyecto. Ejemplo en linux:
+```bash
+cd <nombre del directorio>
+```
+**3:** Crear un entorno virtual:
+```bash
+python -m venv venv
+```
+**4:** Ingresar en el entorno virtual:
+- Para linux y Mac:
+```bash
+source venv/bin/activate
+```
+- Para Window:
+```bash
+venv\Scripts\activate.bat
+```
+**5:** Descargar las dependencias del archivo 'requirements.txt' con el comando:
+```bash
+pip install -r requirements.txt   
+```
+**6:** Correr el servidor web de uvicorn:
+```bash
+uvicorn <nombre del archivo principal>:<nombre de la instancia de FastAPI> --reload
+```
+*ejemplo:*
 ```bash
 uvicorn main:app --reload
 ```
+**7:** En el navegador ir al localhost:8000.
+
 
 ## Endpoints
 
