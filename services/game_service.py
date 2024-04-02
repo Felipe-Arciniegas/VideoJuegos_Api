@@ -10,7 +10,7 @@ class GameService():
 
     def get_game(self, id:int):
         return self.db.query(GameModel).filter(GameModel.id == id).first()
-    
+
     def get_games_by_category(self, category:str):
         return self.db.query(GameModel).filter(GameModel.category == category).all()
     
@@ -33,3 +33,15 @@ class GameService():
     def delete_game(self, game: GameModel):
         self.db.delete(game)
         self.db.commit()
+    
+    def get_games_by_developer(self, developer:str):
+        return self.db.query(GameModel).filter(GameModel.developer == developer).all()
+    
+    def get_games_by_publisher(self, publisher:str):
+        return self.db.query(GameModel).filter(GameModel.publisher == publisher).all()
+    
+    def get_games_by_release_date(self, release_date:int):
+        return self.db.query(GameModel).filter(GameModel.release_date == release_date).all()
+    
+    def get_games_by_title(self, title:str):
+        return self.db.query(GameModel).filter(GameModel.title == title).all()
