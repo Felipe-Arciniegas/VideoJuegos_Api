@@ -3,10 +3,10 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from fastapi import APIRouter, Path, Query, Depends
 
-from schemas.game import Game
+from schemas.game_schema import Game
 from config.databaseV import Session
-from models.game import Game as GameModel
-from services.game import GameService
+from models.game_model import Game as GameModel
+from services.game_service import GameService
 from middlewares.jwt_bearer import JWTBearer
 
 games_router = APIRouter()

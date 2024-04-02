@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
 from config.databaseV import  engine, Base
-from routers.game import games_router
-from routers.auth import auth_router
+from routers.game_router import games_router
+from routers.auth_router import auth_router
 
 # Creando una instancia de la clase FastAPI
 app = FastAPI()

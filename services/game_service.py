@@ -1,5 +1,5 @@
-from schemas.game import Game
-from models.game import Game as GameModel
+from schemas.game_schema import Game
+from models.game_model import Game as GameModel
 
 class GameService():
     def __init__(self, db):
