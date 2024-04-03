@@ -11,5 +11,5 @@ class Game(Base):
     release_date = Column(Integer, nullable=False)
     rating = Column(Float, nullable=False)
     category = Column(String(20), nullable=False)
-    developer = Column(String(20), nullable=False)
+    developer = Column(String, nullable=False)
     publisher = Column(String(20), nullable=False)

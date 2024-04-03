@@ -6,6 +6,7 @@ class JWTBearer(HTTPBearer):
     async def __call__(self, request: Request):
         auth = await super().__call__(request)
         data = validate_token(auth.credentials)
+        print(data)
         if data['email'] != "admin@gmail.com":
             raise HTTPException(status_code=401, detail="Invalid user")
         return auth

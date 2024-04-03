@@ -30,8 +30,8 @@ class GameService():
         game.publisher = data.publisher
         self.db.commit()
 
-    def delete_game(self, game: GameModel):
-        self.db.delete(game)
+    def delete_game(self, game_db: GameModel):
+        self.db.delete(game_db)
         self.db.commit()
     
     def get_games_by_developer(self, developer:str):
